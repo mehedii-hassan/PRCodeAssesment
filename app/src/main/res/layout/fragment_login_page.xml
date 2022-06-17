@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#111315"
-    tools:context=".LoginPage">
+    tools:context=".ui.LoginPage">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glStart"
@@ -56,7 +56,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvName"
+            android:id="@+id/tvUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="2dp"
@@ -68,13 +68,13 @@
 
 
         <EditText
-            android:id="@+id/etNameValue"
+            android:id="@+id/etUserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_edittext_design"
             android:padding="4dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+            app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
 
         <TextView
             android:id="@+id/tvUserPass"
@@ -84,8 +84,8 @@
             android:paddingBottom="2dp"
             android:text="@string/password"
             android:textColor="#A1A1A2"
-            app:layout_constraintStart_toStartOf="@+id/etNameValue"
-            app:layout_constraintTop_toBottomOf="@+id/etNameValue" />
+            app:layout_constraintStart_toStartOf="@+id/etUserName"
+            app:layout_constraintTop_toBottomOf="@+id/etUserName" />
 
         <EditText
             android:id="@+id/etUserPass"
