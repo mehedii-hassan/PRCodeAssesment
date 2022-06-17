@@ -1,239 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#111315"
-    tools:context=".ui.LoginPage">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ScrollView
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#111315"
+        tools:context=".ui.LoginPage">
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/glStart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent=".2" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/glEnd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent=".8" />
-
-
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:padding="10dp"
-                app:layout_constraintEnd_toEndOf="@+id/glEnd"
-                app:layout_constraintStart_toStartOf="@+id/glStart">
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
 
-                <ImageView
-                    android:id="@+id/ivLogo"
-                    android:layout_width="100dp"
-                    android:layout_height="60dp"
-                    android:scaleType="center"
-                    android:src="@drawable/logo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tvFirstName"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glStart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"
-                    android:text="First Name"
-                    android:textColor="#A1A1A2"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".2" />
 
-
-                <EditText
-                    android:id="@+id/etFirstName"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@drawable/custom_edittext_design"
-                    android:padding="4dp"
-                    app:layout_constraintStart_toStartOf="@+id/tvFirstName"
-                    app:layout_constraintTop_toBottomOf="@+id/tvFirstName" />
-
-                <TextView
-                    android:id="@+id/tvLastName"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glEnd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"
-                    android:text="Last Name"
-                    android:textColor="#A1A1A2"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".8" />
 
 
-                <EditText
-                    android:id="@+id/etLastName"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@drawable/custom_edittext_design"
-                    android:padding="4dp"
-                    app:layout_constraintStart_toStartOf="@+id/tvLastName"
-                    app:layout_constraintTop_toBottomOf="@+id/tvLastName" />
-
-                <TextView
-                    android:id="@+id/tvEmail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"
-                    android:text="@string/email"
-                    android:textColor="#A1A1A2"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etLastName" />
-
-
-                <EditText
-                    android:id="@+id/etEmail"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="0dp"
-                    android:layout_height="30dp"
-                    android:layout_marginRight="5dp"
-                    android:background="@drawable/custom_edittext_design"
-                    android:padding="4dp"
-                    app:layout_constraintEnd_toStartOf="@+id/btnSendCode"
-                    app:layout_constraintStart_toStartOf="@+id/tvLastName"
-                    app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnSendCode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:background="@drawable/custom_edittext_design"
-                    android:padding="2dp"
-                    android:text="SEND Code"
-                    android:textAllCaps="false"
-                    android:textColor="#FFD88D"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/etEmail"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etLastName"
-                    app:layout_constraintTop_toTopOf="@+id/etEmail" />
-
-                <TextView
-                    android:id="@+id/tvVerificationCode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="2dp"
-                    android:text="@string/verification_code"
-                    android:textAllCaps="false"
-                    android:textColor="#A1A1A2"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                    app:layout_constraintStart_toStartOf="@+id/glStart">
 
 
-                <EditText
-                    android:id="@+id/etVerificationCode"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@drawable/custom_edittext_design"
-                    android:padding="4dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvVerificationCode" />
+                    <ImageView
+                        android:id="@+id/ivLogo"
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:scaleType="center"
+                        android:src="@drawable/logo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvFirstName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:text="First Name"
+                        android:textColor="#A1A1A2"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
 
-                <TextView
-                    android:id="@+id/tvUserName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"
-                    android:text="@string/user_name"
-                    android:textColor="#A1A1A2"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etVerificationCode" />
+                    <EditText
+                        android:id="@+id/etFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/custom_edittext_design"
+                        android:padding="4dp"
+                        app:layout_constraintStart_toStartOf="@+id/tvFirstName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFirstName" />
+
+                    <TextView
+                        android:id="@+id/tvLastName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:text="Last Name"
+                        android:textColor="#A1A1A2"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
 
 
-                <EditText
-                    android:id="@+id/etUserName"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@drawable/custom_edittext_design"
-                    android:padding="4dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+                    <EditText
+                        android:id="@+id/etLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/custom_edittext_design"
+                        android:padding="4dp"
+                        app:layout_constraintStart_toStartOf="@+id/tvLastName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvLastName" />
 
-                <TextView
-                    android:id="@+id/tvUserPass"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="2dp"
-                    android:text="@string/password"
-                    android:textColor="#A1A1A2"
-                    app:layout_constraintStart_toStartOf="@+id/etUserName"
-                    app:layout_constraintTop_toBottomOf="@+id/etUserName" />
-
-                <EditText
-                    android:id="@+id/etUserPass"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@drawable/custom_edittext_design"
-                    android:padding="4dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvUserPass" />
-
-                <CheckBox
-                    android:id="@+id/cbAgree"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:buttonTint="@color/white"
-                    android:text="I agree"
-                    android:textColor="#8E4238"
-                    app:layout_constraintStart_toStartOf="@+id/etUserPass"
-                    app:layout_constraintTop_toBottomOf="@+id/etUserPass" />
-
-                <TextView
-                    android:id="@+id/tvAgreement"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="@string/agrementText"
-                    android:textColor="#37393D"
-                    android:textSize="10sp"
-                    app:layout_constraintStart_toEndOf="@+id/cbAgree"
-                    app:layout_constraintTop_toTopOf="@id/cbAgree" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@drawable/custom_edittext_design"
-                    android:text="Submit"
-                    android:textAllCaps="false"
-                    android:textColor="#A1A1A2"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAgreement" />
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/email"
+                        android:textColor="#A1A1A2"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etLastName" />
 
 
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/custom_edittext_design"
+                        android:padding="4dp"
+                        app:layout_constraintEnd_toStartOf="@+id/btnSendCode"
+                        app:layout_constraintStart_toStartOf="@+id/tvLastName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSendCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:background="@drawable/custom_edittext_design"
+                        android:padding="2dp"
+                        android:text="SEND Code"
+                        android:textAllCaps="false"
+                        android:textColor="#FFD88D"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/etEmail"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etLastName"
+                        app:layout_constraintTop_toTopOf="@+id/etEmail" />
+
+                    <TextView
+                        android:id="@+id/tvVerificationCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/verification_code"
+                        android:textAllCaps="false"
+                        android:textColor="#A1A1A2"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+
+                    <EditText
+                        android:id="@+id/etVerificationCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/custom_edittext_design"
+                        android:padding="4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvVerificationCode" />
+
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/user_name"
+                        android:textColor="#A1A1A2"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etVerificationCode" />
+
+
+                    <EditText
+                        android:id="@+id/etUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/custom_edittext_design"
+                        android:padding="4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+
+                    <TextView
+                        android:id="@+id/tvUserPass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/password"
+                        android:textColor="#A1A1A2"
+                        app:layout_constraintStart_toStartOf="@+id/etUserName"
+                        app:layout_constraintTop_toBottomOf="@+id/etUserName" />
+
+                    <EditText
+                        android:id="@+id/etUserPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/custom_edittext_design"
+                        android:padding="4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvUserPass" />
+
+                    <CheckBox
+                        android:id="@+id/cbAgree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:buttonTint="@color/white"
+                        android:text="I agree"
+                        android:textColor="#8E4238"
+                        app:layout_constraintStart_toStartOf="@+id/etUserPass"
+                        app:layout_constraintTop_toBottomOf="@+id/etUserPass" />
+
+                    <TextView
+                        android:id="@+id/tvAgreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/agrementText"
+                        android:textColor="#454A50"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toEndOf="@+id/cbAgree"
+                        app:layout_constraintTop_toTopOf="@id/cbAgree" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSubmitRP"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/custom_edittext_design"
+                        android:text="Submit"
+                        android:textAllCaps="false"
+                        android:textColor="#A1A1A2"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAgreement" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+        </ScrollView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

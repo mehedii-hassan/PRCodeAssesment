@@ -9,10 +9,28 @@
         android:id="@+id/loginPage"
         android:name="com.example.androidassesment.ui.LoginPage"
         android:label="fragment_login_page"
-        tools:layout="@layout/fragment_login_page" />
+        tools:layout="@layout/fragment_login_page" >
+        <action
+            android:id="@+id/action_loginPage_to_googleMap"
+            app:destination="@id/googleMap" />
+    </fragment>
     <fragment
         android:id="@+id/registrationPage"
         android:name="com.example.androidassesment.ui.RegistrationPage"
         android:label="fragment_registration_page"
-        tools:layout="@layout/fragment_registration_page" />
+        tools:layout="@layout/fragment_registration_page" >
+        <action
+            android:id="@+id/action_registrationPage_to_loginPage"
+            app:destination="@id/loginPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/googleMap"
+        android:name="com.example.androidassesment.ui.GoogleMap"
+        android:label="fragment_google_map"
+        tools:layout="@layout/fragment_google_map" />
+    <fragment
+        android:id="@+id/googleMapFragment"
+        android:name="com.example.androidassesment.GoogleMapFragment"
+        android:label="fragment_google_map2"
+        tools:layout="@layout/fragment_google_map2" />
 </navigation>

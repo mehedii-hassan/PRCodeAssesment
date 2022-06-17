@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/matt_black"
+    tools:context=".ui.GoogleMap">
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Google Map"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/glEndGM"
+        app:layout_constraintBottom_toTopOf="@+id/glBottomGM2"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEndGM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBottomGM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".62"
+        app:layout_constraintStart_toEndOf="@+id/glEndGM" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBottomGM2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".70"
+        app:layout_constraintStart_toEndOf="@+id/glEndGM" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="#111315"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/glEndGM"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tvSearchDestination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:text="Search Destination"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#1B1C1E"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvSearchDestination"
+            app:layout_constraintTop_toBottomOf="@+id/tvSearchDestination">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="6dp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_edittext_searchbar"
+                android:drawableRight="@drawable/ic_baseline_search_24"
+                android:hint="Destination"
+                android:textColorHint="#454A50"
+                android:padding="3dp"
+                android:textSize="12sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#1B1C1E"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/cardView1"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvOverview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Overview"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvChild"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOverview">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#3A3D42"
+                        android:padding="5dp"
+                        android:text="3Km"
+                        android:textColor="#F44336"
+                        android:textSize="24sp" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Distance"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/cvChild"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOverview" />
+
+                <TextView
+                    android:id="@+id/tvRoadName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Gulshan link road"
+                    android:textColor="#454A50"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cvChild"
+                    app:layout_constraintStart_toStartOf="@+id/tvDistance"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDistance" />
+
+                <TextView
+                    android:id="@+id/tvLocationAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                    android:drawablePadding="2dp"
+                    android:text="44.3333/55.335"
+                    android:drawableTint="#454A50"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/cvChild"
+                    app:layout_constraintTop_toBottomOf="@+id/cvChild" />
+
+                <TextView
+                    android:id="@+id/tvDestinationLA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:padding="2dp"
+                    android:text="Destination Location Address"
+                    android:textSize="12sp"
+                    android:textColor="#454A50"
+                    app:layout_constraintStart_toStartOf="@+id/cvChild"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLocationAddress" />
+
+                <TextView
+                    android:id="@+id/tvOhMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_location_searching_24"
+                    android:drawablePadding="2dp"
+                    android:text="Oh-21min"
+                    android:drawableTint="#454A50"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/cvChild"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDestinationLA" />
+
+                <TextView
+                    android:id="@+id/tvEstimateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Estimate time"
+                    android:textColor="#454A50"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/tvDestinationLA"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOhMin" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/cardView2"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="#1B1C1E"
+                android:drawableLeft="@drawable/ic_baseline_add_24"
+                android:text="Create Note"
+                android:drawableTint="#454A50"
+                android:textAllCaps="false"
+                android:textColor="#454A50"
+                android:textSize="10sp" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/glEndGM"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glBottomGM2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="History"
+            android:layout_marginStart="10dp"
+            android:id="@+id/tvHistory"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#1B1C1E"
+            app:layout_constraintTop_toBottomOf="@+id/tvHistory"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidAssesment/app/src/main/res/drawable/custom_edittext_design.xml" value="0.141" />
+        <entry key="..\:/AndroidAssesment/app/src/main/res/drawable/custom_edittext_searchbar.xml" value="0.207" />
+        <entry key="..\:/AndroidAssesment/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2045" />
+        <entry key="..\:/AndroidAssesment/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.2045" />
+        <entry key="..\:/AndroidAssesment/app/src/main/res/drawable/ic_baseline_location_searching_24.xml" value="0.2045" />
+        <entry key="..\:/AndroidAssesment/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2045" />
         <entry key="..\:/AndroidAssesment/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/AndroidAssesment/app/src/main/res/layout/fragment_google_map.xml" value="0.22" />
+        <entry key="..\:/AndroidAssesment/app/src/main/res/layout/fragment_google_map2.xml" value="0.22447916666666667" />
         <entry key="..\:/AndroidAssesment/app/src/main/res/layout/fragment_login_page.xml" value="0.25" />
         <entry key="..\:/AndroidAssesment/app/src/main/res/layout/fragment_registration_page.xml" value="0.2" />
       </map>
